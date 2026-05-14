@@ -1,4 +1,18 @@
 package iterator_visitor_modelos.modelo;
 
+import iterator_visitor_modelos.visitor.Visitor;
+import java.util.List;
+
+// Clase que representa a un estudiante
 public class Estudiante extends Persona {
+
+    public Estudiante(String codigo, String nombres, String direccion, List<String> telefonos) {
+        super(codigo, nombres, direccion, telefonos);
+    }
+
+    // Recibe al visitante y le dice qué tipo de persona es
+    @Override
+    public void accept(Visitor v) {
+        v.visit(this);
+    }
 }

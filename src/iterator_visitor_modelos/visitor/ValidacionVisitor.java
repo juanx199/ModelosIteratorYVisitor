@@ -17,22 +17,30 @@ public class ValidacionVisitor implements Visitor {
 
     @Override
     public void visit(Estudiante estudiante) {
+        System.out.println("Revisando Estudiante: " + estudiante.getNombres() + " [Cód: " + estudiante.getCodigo() + "]");
         // Valida datos del estudiante
         if (datosIncompletos(estudiante)) {
-            System.out.println("Notificación: El estudiante " + estudiante.getNombres() + " tiene datos incompletos.");
+            System.out.println("   -> Notificación: Tiene datos incompletos.");
+        } else {
+            System.out.println("   -> Info: Todo en orden.");
         }
     }
 
     @Override
     public void visit(Docente docente) {
+        System.out.println("Revisando Docente: " + docente.getNombres() + " [Cód: " + docente.getCodigo() + "]");
         // Valida datos del docente
         if (datosIncompletos(docente)) {
-            System.out.println("Notificación: El docente " + docente.getNombres() + " tiene datos incompletos.");
+            System.out.println("   -> Notificación: Tiene datos incompletos.");
         }
         
         // Regla especial: el código no debe tener más de 4 caracteres
         if (docente.getCodigo() != null && docente.getCodigo().length() > 4) {
-            System.out.println("Error: El docente con código [" + docente.getCodigo() + "] supera los 4 dígitos.");
+            System.out.println("   -> Error: El código [" + docente.getCodigo() + "] supera los 4 dígitos.");
+        }
+        
+        if (!datosIncompletos(docente) && (docente.getCodigo() != null && docente.getCodigo().length() <= 4)) {
+            System.out.println("   -> Info: Todo en orden.");
         }
     }
 }

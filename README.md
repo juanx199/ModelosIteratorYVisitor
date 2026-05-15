@@ -1,4 +1,4 @@
-# Este proyecto implementa una solución para la gestión y validación de datos de Estudiantes y Docentes. El objetivo es demostrar la integración de iterator y visitor para separar la estructura de almacenamiento de la lógica de procesamiento.
+# Solución para la gestión y validación de datos de Estudiantes y Docentes. El objetivo es demostrar la integración de iterator y visitor para separar la estructura de almacenamiento de la lógica de procesamiento.
 
 # Recorrido (Iterator): Se gestionan datos en estructuras de ArrayList y TreeSet. El sistema permite recorrer ambas colecciones de forma uniforme sin exponer su implementación interna.
 

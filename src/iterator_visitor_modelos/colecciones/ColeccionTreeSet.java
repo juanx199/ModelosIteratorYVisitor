@@ -28,7 +28,8 @@ public class ColeccionTreeSet implements Agregado<Persona> {
         private Iterator<Persona> iteradorNativo;
 
         public IteradorConcreto(Set<Persona> coleccion) {
-            // Aprovechamos el iterador de Java para recorrer el Set, ya que no podemos acceder por índice
+            // Aprovechar iterador de Java para recorrer el Set, no podemos acceder por
+            // índice
             this.iteradorNativo = coleccion.iterator();
         }
 

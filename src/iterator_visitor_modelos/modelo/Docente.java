@@ -3,7 +3,6 @@ package iterator_visitor_modelos.modelo;
 import iterator_visitor_modelos.visitor.Visitor;
 import java.util.List;
 
-// Clase que representa a un docente
 public class Docente extends Persona {
 
     public Docente(String codigo, String nombres, String direccion, List<String> telefonos) {

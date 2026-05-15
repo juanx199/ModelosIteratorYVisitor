@@ -3,9 +3,9 @@ package iterator_visitor_modelos.modelo;
 import iterator_visitor_modelos.visitor.Visitor;
 import java.util.List;
 
-// Clase base para las personas, implementa Comparable para el TreeSet
+// implementa Comparable para el TreeSet
 public abstract class Persona implements Comparable<Persona> {
-    
+
     // Atributos comunes
     protected String codigo;
     protected String nombres;
@@ -29,8 +29,19 @@ public abstract class Persona implements Comparable<Persona> {
     }
 
     // Getters
-    public String getCodigo() { return codigo; }
-    public String getNombres() { return nombres; }
-    public String getDireccion() { return direccion; }
-    public List<String> getTelefonos() { return telefonos; }
+    public String getCodigo() {
+        return codigo;
+    }
+
+    public String getNombres() {
+        return nombres;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public List<String> getTelefonos() {
+        return telefonos;
+    }
 }
